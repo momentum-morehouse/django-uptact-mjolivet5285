@@ -22,8 +22,6 @@ class Contact(models.Model):
     birth_day = models.DateField(null=True, blank=True)
     
 class Note(models.Model):
-    text = models.CharField( null= True, blank=True)
+    text = models.CharField( max_length=200, null =True, blank =True)
     time =models.DateTimeField(auto_now_add=True)
-    Note = models.ForeignKey(
-        'Contact',
-        on_delete=models.CASCADE,)  
+    Note = models.ForeignKey(Contact, on_delete=models.CASCADE)  
