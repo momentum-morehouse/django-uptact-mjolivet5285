@@ -19,6 +19,7 @@
         {% endif %}
         {{ contact.city }}, {{ contact.state }} {{ contact.zip_code }}
       </div>
+
     </div>
 
     {% if contact.phone_number %}
@@ -41,5 +42,12 @@
     </p>
   </div>
   {% endfor %}
+
+  {% if birth_day %}
+    <div class="flex">
+      <div class="pr2"><i class="icofont-birth_day"></i></div>
+      <div>{{ birth_day }}</div>
+    </div>
+    {% endif %}
 </div>  
 {% endblock %}
